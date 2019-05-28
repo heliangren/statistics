@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: cs-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+#routes
+zuul:
+  routes:
+    collect-service: /api-gateway/**
+  ignored-patterns: /*-service/**
+

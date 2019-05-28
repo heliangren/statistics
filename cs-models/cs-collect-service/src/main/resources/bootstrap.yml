@@ -1,0 +1,19 @@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: collect-service
+  cloud:
+    config:
+      discovery:
+        service-id: CS-CONFIG
+        enabled: true
+
+  rabbitmq:
+    host:
+    port:
+    username:
+    password:
