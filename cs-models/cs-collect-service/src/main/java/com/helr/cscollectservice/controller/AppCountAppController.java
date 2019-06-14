@@ -50,8 +50,8 @@ public class AppCountAppController {
 	 */
 	@RequestMapping(value="/rabbit", method= RequestMethod.POST)
 	public ResultData rabbit(String msg){
-		amqpTemplate.convertAndSend(RabbitMqConfig.EXCHANGE,
-				RabbitMqConfig.VISIT_MSG,
+		amqpTemplate.convertAndSend(RabbitMqConfig.DIRECT_EXCHANGE,
+				RabbitMqConfig.VISIT_MSG2,
 				msg);
 		return ResultFactory.getSuccessResult("add rabbit port:" + port);
 	}

@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RabbitListener(queues = RabbitMqConfig.VISIT_MSG)
-public class TestReceiveService {
+public class TestReceiveService2 {
 
     @RabbitHandler
     private void process (String msg) {
-        System.out.println("TestReceiveService visit_msg：" + msg);
+        System.out.println("TestReceiveService2 visit_msg：" + msg);
     }
 }
